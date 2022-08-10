@@ -1,0 +1,28 @@
+How to come up with MAX_THREADS based on the Airflow Infra at our disposal
+=========================================================================
+airflow worker - 2 cores
+RAM- 8 GB
+
+Wait time / Service time - this ratio is called blocking coefficient.
+
+Waiting time = ed-fi api server response time 2000 ms 
+i.e call to requests.post(url=full_url,  headers=headers, data=row['Payload']) 
+
+Service time = rest of the processing is 20 ms [(overall time taken by payload_delivery) - (ed-fi api server response time)]
+
+Formula 
+Numthreads = NumCores * (1 + wait_time/service_time)
+
+Lets say our timings are as below
+===================================
+Waiting time = api call time = 2000 ms
+Service time = Time taken without api call = 20 ms [(overall time taken by payload_delivery) - (ed-fi api server response time)]
+
+
+Numthreads  = 2* (1 + 2000/20) = 2 * (1 + 100) = 202 
+
+No of threads can be 202 
+
+
+
+
