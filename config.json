@@ -1,0 +1,1005 @@
+{
+    "entities": [
+        {
+            "active": true,
+            "entity_name": "Calendar",
+            "entity_short_name": "Calendar",
+            "folder_location": "Calendar",
+            "entity_api_path": "/ed-fi/calendars",
+            "entity_order": 2,
+            "domain_name": "EnrollmentDomain",
+            "tables": {
+                "gradeLevels": {
+                    "table_name": "gradeLevels",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "calendarCode": "string"
+                        },
+                        {
+                            "schoolReference_schoolId": "integer"
+                        },
+                        {
+                            "schoolYearTypeReference_schoolYear": "integer"
+                        }
+                    ]
+                },
+                "base": {
+                    "table_name": "base",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "calendarCode": "string"
+                        },
+                        {
+                            "schoolReference_schoolId": "integer"
+                        },
+                        {
+                            "schoolYearTypeReference_schoolYear": "integer"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "active": true,
+            "entity_name": "Program",
+            "entity_short_name": "Program",
+            "folder_location": "Program",
+            "entity_api_path": "/ed-fi/programs",
+            "entity_order": 2,
+            "domain_name": "EnrollmentDomain",
+            "tables": {
+                "characteristics": {
+                    "table_name": "characteristics",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "programTypeDescriptor": "string"
+                        },
+                        {
+                            "programName": "string"
+                        },
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        }
+                    ]
+                },
+                "learningObjectives": {
+                    "table_name": "learningObjectives",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "programTypeDescriptor": "string"
+                        },
+                        {
+                            "programName": "string"
+                        },
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        }
+                    ]
+                },
+                "learningStandards": {
+                    "table_name": "learningStandards",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "programTypeDescriptor": "string"
+                        },
+                        {
+                            "programName": "string"
+                        },
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        }
+                    ]
+                },
+                "services": {
+                    "table_name": "services",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "programTypeDescriptor": "string"
+                        },
+                        {
+                            "programName": "string"
+                        },
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        }
+                    ]
+                },
+                "sponsors": {
+                    "table_name": "sponsors",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "programTypeDescriptor": "string"
+                        },
+                        {
+                            "programName": "string"
+                        },
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        }
+                    ]
+                },
+                "base": {
+                    "table_name": "base",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "programTypeDescriptor": "string"
+                        },
+                        {
+                            "programName": "string"
+                        },
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "active": true,
+            "entity_name": "StudentProgramAssociation",
+            "entity_short_name": "SPA",
+            "folder_location": "StudentProgramAssociation",
+            "entity_api_path": "/ed-fi/studentProgramAssociations",
+            "entity_order": 3,
+            "domain_name": "EnrollmentDomain",
+            "tables": {
+                "programParticipationStatuses": {
+                    "table_name": "programParticipationStatuses",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "programReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "programReference_programName": "string"
+                        },
+                        {
+                            "programReference_programTypeDescriptor": "string"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        },
+                        {
+                            "beginDate": "string"
+                        }
+                    ]
+                },
+                "services": {
+                    "table_name": "services",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "programReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "programReference_programName": "string"
+                        },
+                        {
+                            "programReference_programTypeDescriptor": "string"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        },
+                        {
+                            "beginDate": "string"
+                        }
+                    ]
+                },
+                "base": {
+                    "table_name": "base",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "programReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "programReference_programName": "string"
+                        },
+                        {
+                            "programReference_programTypeDescriptor": "string"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        },
+                        {
+                            "beginDate": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "active": true,
+            "entity_name": "StudentEducationOrganizationAssociation",
+            "entity_short_name": "SEOA",
+            "folder_location": "StudentEducationOrganizationAssociation",
+            "entity_api_path": "/ed-fi/studentEducationOrganizationAssociations",
+            "entity_order": 3,
+            "domain_name": "EnrollmentDomain",
+            "tables": {
+                "addresses_periods": {
+                    "table_name": "addresses_periods",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        },
+                        {
+                            "addressTypeDescriptor": "string"
+                        }
+                    ]
+                },
+                "addresses": {
+                    "table_name": "addresses",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "ancestryEthnicOrigins": {
+                    "table_name": "ancestryEthnicOrigins",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "cohortYears": {
+                    "table_name": "cohortYears",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "disabilities_designations": {
+                    "table_name": "disabilities_designations",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        },
+                        {
+                            "disabilityDescriptor": "string"
+                        }
+                    ]
+                },
+                "disabilities": {
+                    "table_name": "disabilities",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "electronicMails": {
+                    "table_name": "electronicMails",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "internationalAddresses": {
+                    "table_name": "internationalAddresses",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "languages_uses": {
+                    "table_name": "languages_uses",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        },
+                        {
+                            "languageDescriptor": "string"
+                        }
+                    ]
+                },
+                "languages": {
+                    "table_name": "languages",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "programParticipations_programCharacteristics": {
+                    "table_name": "programParticipations_programCharacteristics",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        },
+                        {
+                            "programTypeDescriptor": "string"
+                        }
+                    ]
+                },
+                "programParticipations": {
+                    "table_name": "programParticipations",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "races": {
+                    "table_name": "races",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "studentCharacteristics_periods": {
+                    "table_name": "studentCharacteristics_periods",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        },
+                        {
+                            "studentCharacteristicDescriptor": "string"
+                        }
+                    ]
+                },
+                "studentCharacteristics": {
+                    "table_name": "studentCharacteristics",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "studentIdentificationCodes": {
+                    "table_name": "studentIdentificationCodes",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "studentIndicators_periods": {
+                    "table_name": "studentIndicators_periods",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        },
+                        {
+                            "indicatorName": "string"
+                        }
+                    ]
+                },
+                "studentIndicators": {
+                    "table_name": "studentIndicators",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "telephones": {
+                    "table_name": "telephones",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "tribalAffiliations": {
+                    "table_name": "tribalAffiliations",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_dyslexiaRisks": {
+                    "table_name": "-ext_TexasExtension_dyslexiaRisks",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_dyslexiaServices": {
+                    "table_name": "-ext_TexasExtension_dyslexiaServices",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_earlyReadingIndicators": {
+                    "table_name": "-ext_TexasExtension_earlyReadingIndicators",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_economicDisadvantages": {
+                    "table_name": "-ext_TexasExtension_economicDisadvantages",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_fosterCareTypes": {
+                    "table_name": "-ext_TexasExtension_fosterCareTypes",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_homelessStatuses": {
+                    "table_name": "-ext_TexasExtension_homelessStatuses",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_militaryConnectedStudents": {
+                    "table_name": "-ext_TexasExtension_militaryConnectedStudents",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_pkFundingSources": {
+                    "table_name": "-ext_TexasExtension_pkFundingSources",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_pkProgramTypes": {
+                    "table_name": "-ext_TexasExtension_pkProgramTypes",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_unaccompaniedYouths": {
+                    "table_name": "-ext_TexasExtension_unaccompaniedYouths",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_unschooledAsyleeRefugees": {
+                    "table_name": "-ext_TexasExtension_unschooledAsyleeRefugees",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "base": {
+                    "table_name": "base",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "educationOrganizationReference_educationOrganizationId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "active": true,
+            "entity_name": "StudentSchoolAssociation",
+            "entity_short_name": "SSA",
+            "folder_location": "StudentSchoolAssociation",
+            "entity_api_path": "/ed-fi/studentSchoolAssociations",
+            "entity_order": 3,
+            "domain_name": "EnrollmentDomain",
+            "tables": {
+                "alternativeGraduationPlans": {
+                    "table_name": "alternativeGraduationPlans",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "entryDate": "string"
+                        },
+                        {
+                            "schoolReference_schoolId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "educationPlans": {
+                    "table_name": "educationPlans",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "entryDate": "string"
+                        },
+                        {
+                            "schoolReference_schoolId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "base": {
+                    "table_name": "base",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "entryDate": "string"
+                        },
+                        {
+                            "schoolReference_schoolId": "integer"
+                        },
+                        {
+                            "studentReference_studentUniqueId": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "active": true,
+            "entity_name": "Student",
+            "entity_short_name": "Student",
+            "folder_location": "Student",
+            "entity_api_path": "/ed-fi/students",
+            "entity_order": 1,
+            "domain_name": "StudentIdentificationAndDemographicsDomain",
+            "tables": {
+                "identificationDocuments": {
+                    "table_name": "identificationDocuments",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "otherNames": {
+                    "table_name": "otherNames",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "personalIdentificationDocuments": {
+                    "table_name": "personalIdentificationDocuments",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "visas": {
+                    "table_name": "visas",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_censusBlockGroups": {
+                    "table_name": "-ext_TexasExtension_censusBlockGroups",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_crisisEvents": {
+                    "table_name": "-ext_TexasExtension_crisisEvents",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "studentUniqueId": "string"
+                        }
+                    ]
+                },
+                "base": {
+                    "table_name": "base",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "studentUniqueId": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "active": true,
+            "entity_name": "School",
+            "entity_short_name": "School",
+            "folder_location": "School",
+            "entity_api_path": "/ed-fi/schools",
+            "entity_order": 1,
+            "domain_name": "EducationOrganizationDomain",
+            "tables": {
+                "educationOrganizationCategories": {
+                    "table_name": "educationOrganizationCategories",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "schoolId": "integer"
+                        }
+                    ]
+                },
+                "gradeLevels": {
+                    "table_name": "gradeLevels",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "schoolId": "integer"
+                        }
+                    ]
+                },
+                "addresses_periods": {
+                    "table_name": "addresses_periods",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "schoolId": "integer"
+                        },
+                        {
+                            "addressTypeDescriptor": "string"
+                        }
+                    ]
+                },
+                "addresses": {
+                    "table_name": "addresses",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "schoolId": "integer"
+                        }
+                    ]
+                },
+                "identificationCodes": {
+                    "table_name": "identificationCodes",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "schoolId": "integer"
+                        }
+                    ]
+                },
+                "indicators_periods": {
+                    "table_name": "indicators_periods",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "schoolId": "integer"
+                        },
+                        {
+                            "indicatorDescriptor": "string"
+                        }
+                    ]
+                },
+                "indicators": {
+                    "table_name": "indicators",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "schoolId": "integer"
+                        }
+                    ]
+                },
+                "institutionTelephones": {
+                    "table_name": "institutionTelephones",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "schoolId": "integer"
+                        }
+                    ]
+                },
+                "internationalAddresses": {
+                    "table_name": "internationalAddresses",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "schoolId": "integer"
+                        }
+                    ]
+                },
+                "schoolCategories": {
+                    "table_name": "schoolCategories",
+                    "texas_extension": false,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "schoolId": "integer"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_campusEnrollmentTypes": {
+                    "table_name": "-ext_TexasExtension_campusEnrollmentTypes",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "schoolId": "integer"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_charterWaitlists": {
+                    "table_name": "-ext_TexasExtension_charterWaitlists",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "schoolId": "integer"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_eloTypes_eloActivities": {
+                    "table_name": "-ext_TexasExtension_eloTypes_eloActivities",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "schoolId": "integer"
+                        },
+                        {
+                            "txELOTypeDescriptor": "string"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_eloTypes": {
+                    "table_name": "-ext_TexasExtension_eloTypes",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "schoolId": "integer"
+                        }
+                    ]
+                },
+                "-ext_TexasExtension_nslpTypes": {
+                    "table_name": "-ext_TexasExtension_nslpTypes",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "schoolId": "integer"
+                        }
+                    ]
+                },
+                "base": {
+                    "table_name": "base",
+                    "texas_extension": true,
+                    "active": true,
+                    "identifying_keys": [
+                        {
+                            "schoolId": "integer"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
